@@ -86,6 +86,13 @@
     <DriverSign>
       <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
     </DriverSign>
+    <Link>
+      <AdditionalDependencies />
+      <EntryPointSymbol>entry</EntryPointSymbol>
+    </Link>
+    <ClCompile>
+      <ControlFlowGuard>false</ControlFlowGuard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DriverSign>
