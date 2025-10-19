@@ -1,11 +1,13 @@
 #include <ntddk.h>
 
 void NOP_Toy();
+NTSTATUS NtDisplayString(PUNICODE_STRING DisplayString);
 
 void entry()
 {
 	NOP_Toy();
-	DbgPrint("Hello From NativeEXE");
+	DbgPrint("Hello from NativeEXE!\n");
+	NtDisplayString((PUNICODE_STRING)L"Hello from NativeEXE!\n");
 	return;
 }
 
