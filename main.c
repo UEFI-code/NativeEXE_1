@@ -1,15 +1,18 @@
 #include <ntddk.h>
 
 void NOP_Toy();
-NTSTATUS NtDisplayString(PUNICODE_STRING DisplayString);
 NTSTATUS NtDrawText(PUNICODE_STRING Text);
+NTSTATUS NtDisplayString(PUNICODE_STRING DisplayString);
 NTSTATUS NtDelayExecution(BOOLEAN Alertable, PLARGE_INTEGER DelayInterval);
 
 void entry()
 {
-	NOP_Toy();
-	UNICODE_STRING Text = RTL_CONSTANT_STRING(L"Hello, world!");
+	UNICODE_STRING Text = RTL_CONSTANT_STRING(L"Msg From ntdll!NtDrawText\n");
     NtDrawText(&Text);
+    NOP_Toy();
+	UNICODE_STRING DisplayString = RTL_CONSTANT_STRING(L"Msg From ntdll!NtDisplayString\n");
+	NtDisplayString(&DisplayString);
+	NOP_Toy();
     LARGE_INTEGER Timeout = {.QuadPart = 1 * 1000 * -10000LL};
     NtDelayExecution(FALSE, &Timeout);
 	return;
