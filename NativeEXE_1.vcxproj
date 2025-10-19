@@ -72,6 +72,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
     <TargetExt>.exe</TargetExt>
+    <GenerateManifest />
+    <LinkIncremental />
+    <IgnoreImportLibrary />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
@@ -87,12 +90,47 @@
       <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
     </DriverSign>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>$(WDK_UM_LIB_PATH)ntdll.lib</AdditionalDependencies>
       <EntryPointSymbol>entry</EntryPointSymbol>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <Driver>
+      </Driver>
+      <SuppressStartupBanner>
+      </SuppressStartupBanner>
+      <MergeSections />
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <LinkTimeCodeGenerationObjectFile />
+      <ProfileGuidedDatabase />
+      <SpecifySectionAttributes />
+      <IgnoreAllDefaultLibraries />
+      <RegisterOutput />
+      <AdditionalOptions />
+      <IncrementalLinkDatabaseFile />
+      <TreatLinkerWarningAsErrors />
+      <IgnoreEmbeddedIDL />
+      <UseDynamicDebugging />
+      <SwapRunFromCD />
+      <CLRImageType />
+      <NoEntryPoint />
+      <LinkErrorReporting />
+      <MinimumRequiredVersion />
+      <SwapRunFromNET />
+      <Version />
+      <GenerateMapFile />
+      <MapExports />
+      <SetChecksum />
     </Link>
     <ClCompile>
       <ControlFlowGuard>false</ControlFlowGuard>
     </ClCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies />
+    </ProjectReference>
+    <ProjectReference>
+      <UseLibraryDependencyInputs />
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DriverSign>
@@ -121,6 +159,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DeploymentContent>
     </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

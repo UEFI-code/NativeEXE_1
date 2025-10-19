@@ -1,13 +1,13 @@
 .code
 
-entry PROC
+NOP_Toy PROC
     int 3
     dd 90909090h
     dd 90909090h
     dd 90909090h
     dd 90909090h
     dd 90909090h
-    jmp entry
-entry ENDP
+    ret
+NOP_Toy ENDP
 
 END
