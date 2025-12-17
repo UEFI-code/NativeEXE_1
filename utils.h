@@ -2,8 +2,36 @@
 NTSTATUS NtDrawText(PUNICODE_STRING Text);
 NTSTATUS NtDisplayString(PUNICODE_STRING DisplayString);
 NTSTATUS NtDelayExecution(BOOLEAN Alertable, PLARGE_INTEGER DelayInterval);
+NTSTATUS NtOpenFile(OUT PHANDLE FileHandle,
+                    ACCESS_MASK DesiredAccess,
+                    POBJECT_ATTRIBUTES ObjectAttributes,
+                    PIO_STATUS_BLOCK IoStatusBlock,
+                    ULONG ShareAccess,
+                    ULONG OpenOptions);
+NTSTATUS NtReadFile(
+    HANDLE FileHandle,
+    HANDLE Event,
+    PIO_APC_ROUTINE ApcRoutine,
+    PVOID ApcContext,
+    PIO_STATUS_BLOCK IoStatusBlock,
+    PVOID Buffer,
+    ULONG Length,
+    PLARGE_INTEGER ByteOffset,
+    PULONG Key
+);
+NTSTATUS NtWaitForSingleObject(
+    HANDLE Handle,
+    BOOLEAN Alertable,
+    PLARGE_INTEGER Timeout
+);
+
+// structures
+#include <ntddkbd.h>
 
 // my utility functions
 void NOP_Toy();
 int my_vsprintf(char *buffer, const char *format, ...);
 int PrintString(char* fmt,...);
+NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle);
+NTSTATUS native_get_keyboard_input(HANDLE KeyboardHandle, CHAR *Buffer, ULONG *Length);
+NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, CHAR *c);
