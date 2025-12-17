@@ -104,7 +104,7 @@
       <LinkTimeCodeGenerationObjectFile />
       <ProfileGuidedDatabase />
       <SpecifySectionAttributes />
-      <IgnoreAllDefaultLibraries />
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <RegisterOutput />
       <AdditionalOptions />
       <IncrementalLinkDatabaseFile />
@@ -124,6 +124,7 @@
     </Link>
     <ClCompile>
       <ControlFlowGuard>false</ControlFlowGuard>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
     </ClCompile>
     <ProjectReference>
       <LinkLibraryDependencies />
@@ -162,6 +163,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="native_tools.c" />
+    <ClCompile Include="stdio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

@@ -1,9 +1,5 @@
 #include <ntddk.h>
-
-void NOP_Toy();
-NTSTATUS NtDrawText(PUNICODE_STRING Text);
-NTSTATUS NtDisplayString(PUNICODE_STRING DisplayString);
-NTSTATUS NtDelayExecution(BOOLEAN Alertable, PLARGE_INTEGER DelayInterval);
+#include "utils.h"
 
 void entry()
 {
