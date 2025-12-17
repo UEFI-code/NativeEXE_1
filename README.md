@@ -2,10 +2,10 @@
 
 *Under Dev*
 
-Windows is DOS
+Windows as DOS (Style)
 
 No more `win32k.sys``csrss.exe`
 
-JUST `ntoskrnl.exe`
+JUST `ntoskrnl.exe` (and necessary drv)
 
 `ntdll.dll` is all you need
