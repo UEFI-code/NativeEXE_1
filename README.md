@@ -16,10 +16,4 @@ JUST `ntoskrnl.exe` (and necessary drv)
 
 ![screenshot](./screenshot/1.png)
 
-```
-kd> !object \Device\KeyboardClass0
-Object: ffff80061d5c7420  Type: (ffff80061c9bed20) Device
-    ObjectHeader: ffff80061d5c73f0 (new version)
-    HandleCount: 0  PointerCount: 3
-    Directory Object: ffff910f1d62e490  Name: KeyboardClass0
-```
+See [research.md](research.md) for details.
