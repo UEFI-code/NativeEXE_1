@@ -37,7 +37,7 @@ NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle)
     /* Just open the class driver */
     InitializeObjectAttributes(&ObjectAttributes,
                                &KeyboardName,
-                               0,
+                               OBJ_KERNEL_HANDLE,
                                NULL,
                                NULL);
     IO_STATUS_BLOCK IoStatusBlock;

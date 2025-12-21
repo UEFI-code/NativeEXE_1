@@ -24,6 +24,9 @@ NTSTATUS NtWaitForSingleObject(
     BOOLEAN Alertable,
     PLARGE_INTEGER Timeout
 );
+ULONG NTAPI RtlNtStatusToDosError(
+    NTSTATUS Status
+);
 
 // structures
 #include <ntddkbd.h>
