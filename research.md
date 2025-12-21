@@ -114,3 +114,22 @@ r11=0000000000000000 r12=ffff80061e268bf8 r13=ffff80061d8e9ea0
 r14=ffff80061ce7ca20 r15=ffff80061d5c7420
 ```
 
+Well, the parameter of `KeyboardClassCreate` seems too complex.
+
+Try to break on `NtOpenFile` instead.
+
+```
+kd> r rdx
+rdx=0000000000000080
+
+```
+
+```
+kd> dt nt!_OBJECT_ATTRIBUTES %r8
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff9684`9b8f5590 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+```
