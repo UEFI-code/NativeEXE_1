@@ -30,7 +30,8 @@ NTSTATUS NtWaitForSingleObject(
 
 // my utility functions
 void NOP_Toy();
-int my_vsprintf(char *buffer, const char *format, ...);
+int my_vsprintf(char* buffer, const char* format, va_list args);
+void native_sleep(unsigned int ms);
 int PrintString(char* fmt,...);
 NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle);
 NTSTATUS native_get_keyboard_input(HANDLE KeyboardHandle, CHAR *Buffer, ULONG *Length);

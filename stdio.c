@@ -2,6 +2,14 @@
 #pragma warning(push, 0)
 
 #include <stdarg.h>
+typedef signed char        int8_t;
+typedef short              int16_t;
+typedef int                int32_t;
+typedef long long          int64_t;
+typedef unsigned char      uint8_t;
+typedef unsigned short     uint16_t;
+typedef unsigned int       uint32_t;
+typedef unsigned long long uint64_t;
 
 static void reverse(char* str, int len) {
     int i = 0, j = len - 1;
@@ -13,7 +21,7 @@ static void reverse(char* str, int len) {
     }
 }
 
-static int itoa_simple(int value, char* str, int base) {
+static int itoa_simple(int64_t value, char* str, int base) {
     char* ptr = str;
     int is_negative = 0;
 
@@ -29,7 +37,7 @@ static int itoa_simple(int value, char* str, int base) {
     }
 
     while (value != 0) {
-        int rem = value % base;
+        int rem = (uint64_t)value % base;
         *ptr++ = (rem > 9) ? (rem - 10 + 'a') : (rem + '0');
         value /= base;
     }
@@ -40,10 +48,8 @@ static int itoa_simple(int value, char* str, int base) {
     return ptr - str;
 }
 
-int my_vsprintf(char* buffer, const char* format, ...) {
-    va_list args;
-    va_start(args, format);
-
+int my_vsprintf(char* buffer, const char* format, va_list args)
+{
     char* buf_ptr = buffer;
     const char* p = format;
 
@@ -53,7 +59,7 @@ int my_vsprintf(char* buffer, const char* format, ...) {
             continue;
         }
 
-        p++; // skip '%'
+        p++;
 
         if (*p == 'd') {
             int val = va_arg(args, int);
@@ -71,6 +77,10 @@ int my_vsprintf(char* buffer, const char* format, ...) {
             char* s = va_arg(args, char*);
             while (*s) *buf_ptr++ = *s++;
         }
+        else if (*p == 'c') {
+            char c = (char)va_arg(args, int);
+            *buf_ptr++ = c;
+        }
         else {
             *buf_ptr++ = *p;
         }
@@ -78,7 +88,6 @@ int my_vsprintf(char* buffer, const char* format, ...) {
     }
 
     *buf_ptr = '\0';
-    va_end(args);
     return buf_ptr - buffer;
 }
 

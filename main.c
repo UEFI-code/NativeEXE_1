@@ -6,11 +6,27 @@ void entry()
 	UNICODE_STRING Text = RTL_CONSTANT_STRING(L"Msg From ntdll!NtDrawText\n");
     NtDrawText(&Text);
     NOP_Toy();
-	UNICODE_STRING DisplayString = RTL_CONSTANT_STRING(L"Msg From ntdll!NtDisplayString\n");
-	NtDisplayString(&DisplayString);
-	NOP_Toy();
-    LARGE_INTEGER Timeout = {.QuadPart = 1 * 1000 * -10000LL};
-    NtDelayExecution(FALSE, &Timeout);
+	PrintString("Msg From ntdll!PrintString: %d, %s\n", 233, "Hello Native World");
+	// open keyboard device
+	HANDLE KeyboardHandle; char c;
+	NTSTATUS Status = OpenKeyboard(&KeyboardHandle);
+	if (!NT_SUCCESS(Status))
+	{
+		ULONG win32Err = RtlNtStatusToDosError(Status);
+		PrintString("Failed to open keyboard device: %x\n", win32Err);
+		NOP_Toy();
+		native_sleep(5000);
+		return;
+	}
+	while (1)
+	{
+		native_get_keyboard_char(KeyboardHandle, &c);
+		PrintString("Received keyboard char: %c\n", c);
+		if (c == 27) // ESC key to exit
+		{
+			break;
+		}
+	}
 	return;
 }
 

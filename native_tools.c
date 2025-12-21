@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "utils.h"
 
-void sleep(unsigned int ms)
+void native_sleep(unsigned int ms)
 {
     LARGE_INTEGER Timeout = {.QuadPart = ms * -10000LL};
     NtDelayExecution(FALSE, &Timeout);
