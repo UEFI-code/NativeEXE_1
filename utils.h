@@ -8,6 +8,19 @@ NTSTATUS NtOpenFile(OUT PHANDLE FileHandle,
                     PIO_STATUS_BLOCK IoStatusBlock,
                     ULONG ShareAccess,
                     ULONG OpenOptions);
+NTSTATUS NtCreateFile(
+    OUT PHANDLE FileHandle,
+    ACCESS_MASK DesiredAccess,
+    POBJECT_ATTRIBUTES ObjectAttributes,
+    PIO_STATUS_BLOCK IoStatusBlock,
+    PLARGE_INTEGER AllocationSize,
+    ULONG FileAttributes,
+    ULONG ShareAccess,
+    ULONG CreateDisposition,
+    ULONG CreateOptions,
+    PVOID EaBuffer,
+    ULONG EaLength
+);
 NTSTATUS NtReadFile(
     HANDLE FileHandle,
     HANDLE Event,

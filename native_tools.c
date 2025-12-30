@@ -32,21 +32,30 @@ int PrintString(char* fmt,...)
 
 NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle)
 {
+    UNICODE_STRING KeyboardName;
     OBJECT_ATTRIBUTES ObjectAttributes;
-    UNICODE_STRING KeyboardName = RTL_CONSTANT_STRING(L"\\Device\\KeyboardClass0");
-    /* Just open the class driver */
-    InitializeObjectAttributes(&ObjectAttributes,
-                               &KeyboardName,
-                               OBJ_KERNEL_HANDLE,
-                               NULL,
-                               NULL);
+    RtlInitUnicodeString(&KeyboardName, L"\\Device\\KeyboardClass0");
+    InitializeObjectAttributes(
+        &ObjectAttributes,
+        &KeyboardName,
+        OBJ_KERNEL_HANDLE,
+        NULL,
+        NULL
+    );
     IO_STATUS_BLOCK IoStatusBlock;
-    return NtOpenFile(KeyboardHandle,
-                      FILE_ALL_ACCESS,
-                      &ObjectAttributes,
-                      &IoStatusBlock,
-                      FILE_OPEN,
-                      0);
+    return NtCreateFile(
+        KeyboardHandle,
+        SYNCHRONIZE | GENERIC_READ,
+        &ObjectAttributes,
+        &IoStatusBlock,
+        NULL,
+        0x80,
+        0,
+        FILE_OPEN,
+        1,
+        NULL,
+        0
+    );
 }
 
 NTSTATUS native_get_keyboard_input(HANDLE KeyboardHandle, CHAR *Buffer, ULONG *Length)
