@@ -18,9 +18,20 @@ void entry()
 		native_sleep(5000);
 		return;
 	}
+	PrintString("Successfully opened keyboard device\n");
+	OBJECT_ATTRIBUTES ObjAttr;
+    InitializeObjectAttributes(&ObjAttr, NULL, OBJ_KERNEL_HANDLE, NULL, NULL);
+	HANDLE EventHandle;
+    Status = NtCreateEvent(&EventHandle, 0x1F01FF, &ObjAttr, NotificationEvent, FALSE);
+    if (!NT_SUCCESS(Status))
+    {
+        PrintString("Failed to create event: %08X\n", Status);
+        return;
+    }
+	PrintString("Successfully created event\n");
 	while (1)
 	{
-		Status = native_get_keyboard_char(KeyboardHandle, &c);
+		Status = native_get_keyboard_char(KeyboardHandle, EventHandle, &c);
 		if (!NT_SUCCESS(Status))
 		{
 			ULONG win32Err = RtlNtStatusToDosError(Status);

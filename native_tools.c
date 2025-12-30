@@ -101,34 +101,32 @@ NTSTATUS native_get_keyboard_input(HANDLE KeyboardHandle, CHAR *Buffer, ULONG *L
     }
 }
 
-NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, CHAR *c)
+NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, HANDLE EventHandle, CHAR *c)
 {
-    NTSTATUS Status;
-    IO_STATUS_BLOCK IoStatusBlock;
-    KEYBOARD_INPUT_DATA InputData;
-
+    NtClearEvent(EventHandle);
     while (1)
     {
-        Status = NtReadFile(
+        IO_STATUS_BLOCK IoStatusBlock;
+        KEYBOARD_INPUT_DATA InputData;
+        NTSTATUS Status = NtReadFile(
             KeyboardHandle,
-            NULL, NULL, NULL,
+            EventHandle,
+            NULL, NULL,
             &IoStatusBlock,
             &InputData,
             sizeof(InputData),
             NULL,
-            NULL);
-
-        if (Status == STATUS_PENDING)
-        {
-            NtWaitForSingleObject(KeyboardHandle, FALSE, NULL);
-            continue;
-        }
-
+            NULL
+        );
         if (!NT_SUCCESS(Status))
         {
             return Status;
         }
-
+        if (Status == STATUS_PENDING)
+        {
+            NtWaitForSingleObject(EventHandle, FALSE, NULL);
+            Status = IoStatusBlock.Status;
+        }
         if (!(InputData.Flags & KEY_BREAK))
         {
             *c = (char)InputData.MakeCode;
