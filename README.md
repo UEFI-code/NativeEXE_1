@@ -12,8 +12,10 @@ JUST `ntoskrnl.exe` (and necessary drv)
 
 # Bugs
 
-### `\Device\KeyboardClass0` Open failed
+~~### `\Device\KeyboardClass0` Open failed~~
 
-![screenshot](./screenshot/1.png)
+### read char failed
+
+![screenshot](./screenshot/2.png)
 
 See [research.md](research.md) for details.

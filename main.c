@@ -20,7 +20,15 @@ void entry()
 	}
 	while (1)
 	{
-		native_get_keyboard_char(KeyboardHandle, &c);
+		Status = native_get_keyboard_char(KeyboardHandle, &c);
+		if (!NT_SUCCESS(Status))
+		{
+			ULONG win32Err = RtlNtStatusToDosError(Status);
+			PrintString("Failed to read keyboard char: %x\n", win32Err);
+			NOP_Toy();
+			native_sleep(5000);
+			return;
+		}
 		PrintString("Received keyboard char: %c\n", c);
 		if (c == 27) // ESC key to exit
 		{
