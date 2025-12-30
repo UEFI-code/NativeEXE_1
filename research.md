@@ -119,12 +119,6 @@ Well, the parameter of `KeyboardClassCreate` seems too complex.
 Try to break on `NtOpenFile` instead.
 
 ```
-kd> r rdx
-rdx=0000000000000080
-
-```
-
-```
 kd> dt nt!_OBJECT_ATTRIBUTES %r8
    +0x000 Length           : 0x30
    +0x008 RootDirectory    : (null) 
@@ -132,4 +126,11 @@ kd> dt nt!_OBJECT_ATTRIBUTES %r8
    +0x018 Attributes       : 0x240
    +0x020 SecurityDescriptor : (null) 
    +0x028 SecurityQualityOfService : (null) 
+```
+
+### Auto log NtOpenFile event
+
+```
+.logopen c:\ntopen_log.txt
+bp nt!NtOpenFile "dt nt!_OBJECT_ATTRIBUTES @r8; g"
 ```
