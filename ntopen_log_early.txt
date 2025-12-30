@@ -1,0 +1,1994 @@
+Opened log file 'c:\ntopen_log.txt'
+kd> bp nt!NtOpenFile "dt nt!_OBJECT_ATTRIBUTES @r8; g"
+kd> g
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06480 _UNICODE_STRING "\Device\KMDF0"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`3668c030 _UNICODE_STRING "\Device\WindowsTrustedRT"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`365ed5c0 _UNICODE_STRING "\Device\RESOURCE_HUB"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`365ed5c0 _UNICODE_STRING "\Device\RESOURCE_HUB"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffdf06`b69a9c90 _UNICODE_STRING "\??\ROOT#spaceport#0000#{53f5630e-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffdf06`b69a9a20 _UNICODE_STRING "\??\ROOT#volmgr#0000#{53f5630e-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06590 _UNICODE_STRING "\Device\VolMgrControl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06510 _UNICODE_STRING "\Device\RawDisk"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06510 _UNICODE_STRING "\Device\RawCdRom"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa063a0 _UNICODE_STRING "\SystemRoot\System32\csrss.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06380 _UNICODE_STRING "\SystemRoot\System32"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa063a0 _UNICODE_STRING "\SystemRoot\System32\csrss.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa065d0 _UNICODE_STRING "\Device\CNG"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06670 _UNICODE_STRING "\Device\KsecDD"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06838 _UNICODE_STRING "\ArcName\multi(0)disk(0)rdisk(0)partition(3)"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc070 _UNICODE_STRING "\Device\VMBus\kmcl_interface"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc478 _UNICODE_STRING "\DosDevices\MPIOControl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#0000000000100000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a8136920 _UNICODE_STRING "\??\Volume{7bad7b92-998b-413c-8567-e087ede2d154}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a6ddc5d0 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#0000000000100000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc0e8 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbf08 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbf08 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#0000000006500000#{7f108a28-9833-4b3b-b780-2c6b5fa5c062}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc2d8 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc0f8 _UNICODE_STRING "\Device\HarddiskVolume2"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#0000000007500000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a8136c20 _UNICODE_STRING "\DosDevices\C:"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a6d125f0 _UNICODE_STRING "\??\Volume{35d8157b-9a19-4b79-b6a3-8eab5ce79dff}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a6ddc1c0 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#0000000007500000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc0e8 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbf08 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbf08 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#00000007DF200000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a6de2a60 _UNICODE_STRING "\??\Volume{5a92677b-4f3f-466e-9052-3341e24649c5}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a6ddbe80 _UNICODE_STRING "\Device\HarddiskVolume4"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\STORAGE#Volume#{0b96dfde-7600-11f0-9399-806e6f6e6963}#00000007DF200000#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc0e8 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbf08 _UNICODE_STRING "\Device\HarddiskVolume4"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbf08 _UNICODE_STRING "\Device\HarddiskVolume4"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06838 _UNICODE_STRING "\ArcName\multi(0)disk(0)rdisk(0)partition(3)"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa065d0 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05ad0 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05970 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05970 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05c18 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05a38 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05a38 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbc60 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbb00 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbb00 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbdd8 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbbf8 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbbbf8 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbb950 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbb7f0 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbb7f0 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05ab0 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05980 _UNICODE_STRING "\Device\HarddiskVolume3"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ad79b80 _UNICODE_STRING "\Device\HarddiskVolume3\System Volume Information"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa059c0 _UNICODE_STRING "\SystemRoot\System32\spoolsv.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa059c0 _UNICODE_STRING "\SystemRoot\splwow64.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa059c0 _UNICODE_STRING "\SystemRoot\System32\WUDFHost.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06810 _UNICODE_STRING "\SystemRoot\System32\Drivers\crashdmp.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa056c0 _UNICODE_STRING "\Device\SysEnv"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05988 _UNICODE_STRING "\SystemRoot\System32\CodeIntegrity\ACPolicy.p7b"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05900 _UNICODE_STRING "\??\C:\ProgramData\Microsoft\MF\Active.GRL"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`3574f8e0 _UNICODE_STRING "\ArcName\multi(0)disk(0)rdisk(0)partition(3)"
+   +0x018 Attributes       : 0x200
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06a10 _UNICODE_STRING "\SystemRoot\LastGood"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`3574d9e0 _UNICODE_STRING "\SystemRoot\System32\ntdll.dll"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`3574d9a0 _UNICODE_STRING "\SystemRoot\SysWOW64\ntdll.dll"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`3574d960 _UNICODE_STRING "\SystemRoot\SysArm32\ntdll.dll"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`3574da20 _UNICODE_STRING "\SystemRoot\System32\vertdll.dll"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffdf06`b696cb88 _UNICODE_STRING "\SystemRoot\system32\ntoskrnl.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06b20 _UNICODE_STRING "\SystemRoot\System32"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\drivers\cdrom.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Common-Drivers-merged-Package~31bf3856ad364e35~amd64~~10.0.20348.587.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\filecrypt.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Desktop-Shared-Drivers-merged-Package~31bf3856ad364e35~amd64~~10.0.20348.587.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06630 _UNICODE_STRING "\SystemRoot\system32\drivers\tbs.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\Drivers\Null.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Foundation-Group-merged-Package~31bf3856ad364e35~amd64~~10.0.20348.587.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\drivers\dxgkrnl.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06630 _UNICODE_STRING "\SystemRoot\System32\drivers\watchdog.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05118 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Graphics-Required-Core-Package~31bf3856ad364e35~amd64~~10.0.20348.469.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+KDTARGET: Refreshing KD connection
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\basicdisplay.inf_amd64_7e9cb61920ccc040\BasicDisplay.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Common-Drivers-Package-windows-Package~31bf3856ad364e35~amd64~~10.0.20348.1.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06690 _UNICODE_STRING "\Device\DxgKrnl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06700 _UNICODE_STRING "\Device\DxgKrnl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\basicrender.inf_amd64_1c03174c7c755975\BasicRender.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06770 _UNICODE_STRING "\Device\DxgKrnl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06880 _UNICODE_STRING "\Device\DxgKrnl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\Drivers\Npfs.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\Drivers\Msfs.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\Drivers\CimFS.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\DRIVERS\tdx.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06630 _UNICODE_STRING "\SystemRoot\system32\DRIVERS\TDI.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\DRIVERS\netbt.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Server-Features-Package016~31bf3856ad364e35~amd64~~10.0.20348.587.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06790 _UNICODE_STRING "\Device\RasAcd"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\afunix.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-AfUnix-Package~31bf3856ad364e35~amd64~~10.0.20348.558.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\afd.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\drivers\pacer.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\drivers\ndiscap.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-ServerCore-SKU-Foundation-merged-Package~31bf3856ad364e35~amd64~~10.0.20348.587.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\netbios.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\DRIVERS\rdbss.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\nsiproxy.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\drivers\npsvctrig.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-CoreSystem-UnifiedBPM-Package~31bf3856ad364e35~amd64~~10.0.20348.502.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\drivers\mssmbios.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\System32\Drivers\dfsc.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa054a8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-CoreSystem-RemoteFS-Client-Package~31bf3856ad364e35~amd64~~10.0.20348.587.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a82bed98 _UNICODE_STRING "\Device\DfsClient"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\dam.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06630 _UNICODE_STRING "\SystemRoot\system32\drivers\KMPDC.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada8550 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7840 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada76e0 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada76e0 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7988 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada77a8 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada77a8 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfac60 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfab00 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfab00 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfadd8 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfabf8 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfabf8 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7558 _UNICODE_STRING "\SystemRoot\System32\Drivers\fastfat.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9008 _UNICODE_STRING "\Device\NetWareRedirector"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9020 _UNICODE_STRING "\Device\NamedPipe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xfffff804`360b9038 _UNICODE_STRING "\Device\Mailslot"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7070 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada6f10 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada6f10 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada73b0 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7250 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7250 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7400 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada72a0 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada72a0 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada7710 _UNICODE_STRING "\Device\MountPointManager"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada75e0 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ada8550 _UNICODE_STRING "\Device\HarddiskVolume1"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa059e8 _UNICODE_STRING "\Device\HarddiskVolume1\EFI\Microsoft\Boot\Policies\UnlockToken.pol"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05610 _UNICODE_STRING "\Device\SysEnv"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\drivers\bam.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06998 _UNICODE_STRING "\SystemRoot\system32\DRIVERS\ahcache.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06950 _UNICODE_STRING "\SystemRoot\System32\c_1252.nls"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfad70 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\basicdisplay.inf_amd64_7e9cb61920ccc040\BasicDisplay.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06950 _UNICODE_STRING "\SystemRoot\System32\c_437.nls"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\compositebus.inf_amd64_130dea07a2ae55eb\CompositeBus.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa06970 _UNICODE_STRING "\SystemRoot\System32\l_intl.nls"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\kdnic.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa066f0 _UNICODE_STRING "\Device\SysEnv"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05c90 _UNICODE_STRING "\SystemRoot\bootstat.dat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfabd8 _UNICODE_STRING "\SystemRoot\AppPatch\drvmain.sdb"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfabd8 _UNICODE_STRING "\SystemRoot\AppPatch\drvpatch.sdb"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\umbus.inf_amd64_f529037a77b144c5\umbus.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\dmvsc.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1ab45d10 _UNICODE_STRING "\SystemRoot\bootstat.dat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\VMBusHID.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb060 _UNICODE_STRING "\SystemRoot\System32\drivers\HIDCLASS.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05420 _UNICODE_STRING "\SystemRoot\System32\csrss.exe"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acf9b48 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Connectivity-HID-Package~31bf3856ad364e35~amd64~~10.0.20348.1.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05420 _UNICODE_STRING "\SystemRoot\WinSxs\"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05420 _UNICODE_STRING "\SystemRoot\"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1aa05400 _UNICODE_STRING "\SystemRoot\System32"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfacd0 _UNICODE_STRING "\SystemRoot\System32\drivers\HIDPARSE.SYS"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\hyperkbd.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\kbdclass.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\HyperVideo.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfafb0 _UNICODE_STRING "\Device\DxgKrnl"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfad70 _UNICODE_STRING "\SystemRoot\System32\drivers\HyperVideo.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\vmgencounter.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\intelppm.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\NdisVirtualBus.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\swenum.inf_amd64_a8eddc34aa14df5f\swenum.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb060 _UNICODE_STRING "\SystemRoot\System32\DriverStore\FileRepository\swenum.inf_amd64_a8eddc34aa14df5f\ks.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb060 _UNICODE_STRING "\SystemRoot\System32\drivers\ks.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\rdpbus.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acf9ed8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Server-Features-Package015~31bf3856ad364e35~amd64~~10.0.20348.558.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\ROOT#KDNIC#0000#{cac88484-7515-4c03-82e6-71a87abac361}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\mouhid.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x000000d8`e596ede8 _UNICODE_STRING "\??\C:\Windows"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1adcba80 _UNICODE_STRING "\Device\ahcache"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acf9ed8 _UNICODE_STRING "\SystemRoot\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-OneCore-Connectivity-Mouse-Package~31bf3856ad364e35~amd64~~10.0.20348.1.cat"
+   +0x018 Attributes       : 0x2c0
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb3c8 _UNICODE_STRING "\SystemRoot\System32\drivers\mouclass.sys"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x000000d8`e596f780 _UNICODE_STRING "\Device\RdyBoost"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb4f8 _UNICODE_STRING "\Device\00000012"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\SCSI#CdRom&Ven_Msft&Prod_Virtual_DVD-ROM#5&2a27e34e&0&000001#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a834c960 _UNICODE_STRING "\??\Volume{0b96dff3-7600-11f0-9399-806e6f6e6963}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a834ca20 _UNICODE_STRING "\DosDevices\D:"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffff858f`a8355430 _UNICODE_STRING "\Device\CdRom0"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\SCSI#CdRom&Ven_Msft&Prod_Virtual_DVD-ROM#5&2a27e34e&0&000001#{53f5630d-b6bf-11d0-94f2-00a0c91efb8b}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x000000d8`e596ef08 _UNICODE_STRING "\??\C:\Windows\System32"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x000000d8`e596ee48 _UNICODE_STRING "\??\C:\Windows\SysWOW64"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06131b0 _UNICODE_STRING "SHCORE.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb800 _UNICODE_STRING "\Device\KsecDD"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb760 _UNICODE_STRING "\Device\KsecDD"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb7f0 _UNICODE_STRING "\Device\KsecDD"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acfb750 _UNICODE_STRING "\Device\KsecDD"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0xffffbb02`1acbc998 _UNICODE_STRING "\??\ACPI#Hyper_V_Gen_Counter_V1#0#{3ff2c92b-6598-4e60-8e1c-0ccf4927e319}"
+   +0x018 Attributes       : 0x240
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06134d0 _UNICODE_STRING "rpcrt4.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06135c0 _UNICODE_STRING "combase.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06136b0 _UNICODE_STRING "coml2.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06137f0 _UNICODE_STRING "user32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613160 _UNICODE_STRING "sechost.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0605f70 _UNICODE_STRING "wow64cpu.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613930 _UNICODE_STRING "difxapi.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613980 _UNICODE_STRING "gdiplus.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613200 _UNICODE_STRING "WLDAP32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613890 _UNICODE_STRING "wow64win.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06139d0 _UNICODE_STRING "advapi32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06138e0 _UNICODE_STRING "WS2_32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613700 _UNICODE_STRING "Setupapi.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06133e0 _UNICODE_STRING "wow64.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613070 _UNICODE_STRING "MSCTF.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613660 _UNICODE_STRING "SHELL32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613340 _UNICODE_STRING "MSVCRT.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613610 _UNICODE_STRING "IMAGEHLP.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613110 _UNICODE_STRING "OLEAUT32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0605ee0 _UNICODE_STRING "kernel32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613840 _UNICODE_STRING "wow64con.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06132f0 _UNICODE_STRING "ole32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0606000 _UNICODE_STRING "wowarmhw.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0606300 _UNICODE_STRING "NSI.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613390 _UNICODE_STRING "PSAPI.DLL"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06137a0 _UNICODE_STRING "wow64base.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613250 _UNICODE_STRING "NORMALIZ.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0606090 _UNICODE_STRING "xtajit.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613a20 _UNICODE_STRING "gdi32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06132a0 _UNICODE_STRING "IMM32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06130c0 _UNICODE_STRING "COMDLG32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613750 _UNICODE_STRING "SHLWAPI.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0606120 _UNICODE_STRING "xtajit64.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613570 _UNICODE_STRING "clbcatq.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613c00 _UNICODE_STRING "CRYPT32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613d90 _UNICODE_STRING "WINTRUST.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0605100 _UNICODE_STRING "bcryptPrimitives.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613ed0 _UNICODE_STRING "win32u.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b06160c0 _UNICODE_STRING "COMCTL32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613f20 _UNICODE_STRING "msvcp_win.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613480 _UNICODE_STRING "kernelbase.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613430 _UNICODE_STRING "ucrtbase.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0616520 _UNICODE_STRING "gdi32full.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000094 Void
+   +0x010 ObjectName       : 0x000002b4`b0613cf0 _UNICODE_STRING "ntdll.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613390 _UNICODE_STRING "PSAPI.DLL"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0616520 _UNICODE_STRING "gdi32full.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06135c0 _UNICODE_STRING "combase.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613c00 _UNICODE_STRING "CRYPT32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0605100 _UNICODE_STRING "bcryptPrimitives.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613200 _UNICODE_STRING "WLDAP32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613930 _UNICODE_STRING "difxapi.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613610 _UNICODE_STRING "IMAGEHLP.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06139d0 _UNICODE_STRING "advapi32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06132a0 _UNICODE_STRING "IMM32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06137a0 _UNICODE_STRING "wow64base.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0606300 _UNICODE_STRING "NSI.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613570 _UNICODE_STRING "clbcatq.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613430 _UNICODE_STRING "ucrtbase.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06131b0 _UNICODE_STRING "SHCORE.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613750 _UNICODE_STRING "SHLWAPI.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613070 _UNICODE_STRING "MSCTF.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06130c0 _UNICODE_STRING "COMDLG32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613660 _UNICODE_STRING "SHELL32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613480 _UNICODE_STRING "kernelbase.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613cf0 _UNICODE_STRING "ntdll.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06137f0 _UNICODE_STRING "user32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06160c0 _UNICODE_STRING "COMCTL32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613110 _UNICODE_STRING "OLEAUT32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613160 _UNICODE_STRING "sechost.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613840 _UNICODE_STRING "wow64con.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0605ee0 _UNICODE_STRING "kernel32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06133e0 _UNICODE_STRING "wow64.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613a20 _UNICODE_STRING "gdi32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613250 _UNICODE_STRING "NORMALIZ.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613890 _UNICODE_STRING "wow64win.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613f20 _UNICODE_STRING "msvcp_win.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613d90 _UNICODE_STRING "WINTRUST.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613340 _UNICODE_STRING "MSVCRT.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613ed0 _UNICODE_STRING "win32u.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06136b0 _UNICODE_STRING "coml2.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613700 _UNICODE_STRING "Setupapi.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06132f0 _UNICODE_STRING "ole32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06138e0 _UNICODE_STRING "WS2_32.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b06134d0 _UNICODE_STRING "rpcrt4.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : 0x00000000`00000098 Void
+   +0x010 ObjectName       : 0x000002b4`b0613980 _UNICODE_STRING "gdiplus.dll"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x000000d8`e596e6c8 _UNICODE_STRING "\Device\NamedPipe\"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x000000d8`e596e6d8 _UNICODE_STRING "\Device\mailslot\"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+   +0x000 Length           : 0x30
+   +0x008 RootDirectory    : (null) 
+   +0x010 ObjectName       : 0x00000067`e235ef98 _UNICODE_STRING "\??\C:\Windows\system32\"
+   +0x018 Attributes       : 0x40
+   +0x020 SecurityDescriptor : (null) 
+   +0x028 SecurityQualityOfService : (null) 
+Break instruction exception - code 80000003 (first chance)
+0033:00007ff6`8d291000 cc              int     3
+kd> .logclose
+Closing open log file c:\ntopen_log.txt
