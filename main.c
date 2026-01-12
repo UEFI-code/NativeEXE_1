@@ -19,7 +19,7 @@ void entry()
 		native_sleep(5000);
 		return;
 	}
-	PrintString("Successfully opened keyboard device\n");
+	PrintString("Successfully opened keyboard device, Handle: 0x%x\n", KeyboardHandle);
 	OBJECT_ATTRIBUTES ObjAttr;
     InitializeObjectAttributes(&ObjAttr, NULL, OBJ_KERNEL_HANDLE, NULL, NULL);
 	HANDLE EventHandle;
@@ -29,7 +29,7 @@ void entry()
         PrintString("Failed to create event: %x\n", Status);
         return;
     }
-	PrintString("Successfully created event\n");
+	PrintString("Successfully created event, Handle: 0x%x\n", EventHandle);
 	while (1)
 	{
 		char c;

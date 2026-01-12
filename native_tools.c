@@ -59,9 +59,11 @@ NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlo
 
 NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *c)
 {
+    start:
     NtClearEvent(EventHandle);
     pIoStatusBlock->Status = 0;
     KEYBOARD_INPUT_DATA InputData = {0};
+    LARGE_INTEGER ByteOffset = {0};
     NTSTATUS Status = NtReadFile(
         KeyboardHandle,
         EventHandle,
@@ -69,36 +71,22 @@ NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoSta
         pIoStatusBlock,
         &InputData,
         sizeof(InputData),
-        NULL,
+        &ByteOffset,
         NULL
     );
-    // if (!NT_SUCCESS(Status))
-    // {
-    //     return Status;
-    // }
-    // if (Status == STATUS_PENDING)
-    // {
-    //     NtWaitForSingleObject(EventHandle, FALSE, NULL);
-    //     Status = IoStatusBlock.Status;
-    // }
-    PrintString("NtReadFile status: 0x%x\n", Status);
-    while (1)
+    if (!NT_SUCCESS(Status))
+        return Status;
+    PrintString("NtReadFile succeeded: 0x%x\n", Status);
+    if (Status == STATUS_PENDING)
     {
-        LARGE_INTEGER Timeout = {.QuadPart = 1000 * -10000LL};
-        Status = NtWaitForSingleObject(EventHandle, FALSE, &Timeout);
-        if (Status == STATUS_TIMEOUT)
-        {
-            PrintString("Timeout waiting for keyboard event.\n");
-            continue;
-        }
-        else
-        {
-            PrintString("Keyboard event occurred.\n");
-        }
-        if (!(InputData.Flags & KEY_BREAK))
-        {
-            *c = (char)InputData.MakeCode;
-            return STATUS_SUCCESS;
-        }
+        PrintString("Read pending, waiting for event...\n");
+        NtWaitForSingleObject(EventHandle, FALSE, NULL);
+        PrintString("Event signaled, Flags: 0x%x, MakeCode: 0x%x\n", InputData.Flags, InputData.MakeCode);
     }
+    if (InputData.Flags == 0) // key make
+    {
+        *c = (char)InputData.MakeCode;
+        return STATUS_SUCCESS;
+    }
+    goto start;
 }
