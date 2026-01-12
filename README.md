@@ -4,7 +4,7 @@
 
 Windows as DOS (Style)
 
-No more `win32k.sys``csrss.exe`
+No more fucking `win32k.sys` or `csrss.exe`
 
 JUST `ntoskrnl.exe` (and necessary drv)
 
