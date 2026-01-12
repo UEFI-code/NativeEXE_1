@@ -8,8 +8,9 @@ void entry()
     NOP_Toy();
 	PrintString("Msg From ntdll!PrintString: %d, %s\n", 233, "Hello Native World");
 	// open keyboard device
-	HANDLE KeyboardHandle; char c;
-	NTSTATUS Status = OpenKeyboard(&KeyboardHandle);
+	HANDLE KeyboardHandle;
+	IO_STATUS_BLOCK IoStatusBlock;
+	NTSTATUS Status = OpenKeyboard(&KeyboardHandle, &IoStatusBlock);
 	if (!NT_SUCCESS(Status))
 	{
 		ULONG win32Err = RtlNtStatusToDosError(Status);
@@ -25,13 +26,14 @@ void entry()
     Status = NtCreateEvent(&EventHandle, 0x1F01FF, &ObjAttr, NotificationEvent, FALSE);
     if (!NT_SUCCESS(Status))
     {
-        PrintString("Failed to create event: %08X\n", Status);
+        PrintString("Failed to create event: %x\n", Status);
         return;
     }
 	PrintString("Successfully created event\n");
 	while (1)
 	{
-		Status = native_get_keyboard_char(KeyboardHandle, EventHandle, &c);
+		char c;
+		Status = native_get_keyboard_char(KeyboardHandle, &IoStatusBlock, EventHandle, &c);
 		if (!NT_SUCCESS(Status))
 		{
 			ULONG win32Err = RtlNtStatusToDosError(Status);

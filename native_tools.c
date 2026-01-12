@@ -30,7 +30,7 @@ int PrintString(char* fmt,...)
     return Len;
 }
 
-NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle)
+NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock)
 {
     UNICODE_STRING KeyboardName;
     OBJECT_ATTRIBUTES ObjectAttributes;
@@ -42,12 +42,11 @@ NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle)
         NULL,
         NULL
     );
-    IO_STATUS_BLOCK IoStatusBlock;
     return NtCreateFile(
-        KeyboardHandle,
+        pKeyboardHandle,
         SYNCHRONIZE | GENERIC_READ,
         &ObjectAttributes,
-        &IoStatusBlock,
+        pIoStatusBlock,
         NULL,
         0x80,
         0,
@@ -58,74 +57,43 @@ NTSTATUS OpenKeyboard(OUT PHANDLE KeyboardHandle)
     );
 }
 
-NTSTATUS native_get_keyboard_input(HANDLE KeyboardHandle, CHAR *Buffer, ULONG *Length)
-{
-    NTSTATUS Status;
-    IO_STATUS_BLOCK IoStatusBlock;
-    KEYBOARD_INPUT_DATA InputData;
-    ULONG Index = 0;
-
-    while (1)
-    {
-        Status = NtReadFile(
-            KeyboardHandle,
-            NULL, NULL, NULL,
-            &IoStatusBlock,
-            &InputData,
-            sizeof(InputData),
-            NULL,
-            NULL);
-
-        if (Status == STATUS_PENDING)
-        {
-            NtWaitForSingleObject(KeyboardHandle, FALSE, NULL);
-            continue;
-        }
-
-        if (!NT_SUCCESS(Status))
-        {
-            return Status;
-        }
-
-        if (!(InputData.Flags & KEY_BREAK))
-        {
-            char c = (char)InputData.MakeCode;
-            if (c == 0x1C || Index >= 128 - 1)
-            {
-                Buffer[Index] = '\0';
-                *Length = Index;
-                return STATUS_SUCCESS;
-            }
-            Buffer[Index++] = c;
-        }
-    }
-}
-
-NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, HANDLE EventHandle, CHAR *c)
+NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *c)
 {
     NtClearEvent(EventHandle);
+    pIoStatusBlock->Status = 0;
+    KEYBOARD_INPUT_DATA InputData = {0};
+    NTSTATUS Status = NtReadFile(
+        KeyboardHandle,
+        EventHandle,
+        NULL, NULL,
+        pIoStatusBlock,
+        &InputData,
+        sizeof(InputData),
+        NULL,
+        NULL
+    );
+    // if (!NT_SUCCESS(Status))
+    // {
+    //     return Status;
+    // }
+    // if (Status == STATUS_PENDING)
+    // {
+    //     NtWaitForSingleObject(EventHandle, FALSE, NULL);
+    //     Status = IoStatusBlock.Status;
+    // }
+    PrintString("NtReadFile status: 0x%x\n", Status);
     while (1)
     {
-        IO_STATUS_BLOCK IoStatusBlock;
-        KEYBOARD_INPUT_DATA InputData;
-        NTSTATUS Status = NtReadFile(
-            KeyboardHandle,
-            EventHandle,
-            NULL, NULL,
-            &IoStatusBlock,
-            &InputData,
-            sizeof(InputData),
-            NULL,
-            NULL
-        );
-        if (!NT_SUCCESS(Status))
+        LARGE_INTEGER Timeout = {.QuadPart = 1000 * -10000LL};
+        Status = NtWaitForSingleObject(EventHandle, FALSE, &Timeout);
+        if (Status == STATUS_TIMEOUT)
         {
-            return Status;
+            PrintString("Timeout waiting for keyboard event.\n");
+            continue;
         }
-        if (Status == STATUS_PENDING)
+        else
         {
-            NtWaitForSingleObject(EventHandle, FALSE, NULL);
-            Status = IoStatusBlock.Status;
+            PrintString("Keyboard event occurred.\n");
         }
         if (!(InputData.Flags & KEY_BREAK))
         {
