@@ -27,6 +27,6 @@ JUST `ntoskrnl.exe` (and necessary drv)
 
 ~~### read char failed~~
 
-![screenshot](./screenshot/3.png)
+![screenshot](./screenshot/4.png)
 
 See [research.md](research.md) for details.

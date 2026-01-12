@@ -59,5 +59,7 @@ void NOP_Toy();
 int my_vsprintf(char* buffer, const char* format, va_list args);
 void native_sleep(unsigned int ms);
 int PrintString(char* fmt,...);
+char scancode_2_char(UINT16 scancode);
 NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock);
+NTSTATUS native_get_keyboard_scancode(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, KEYBOARD_INPUT_DATA *pInputData);
 NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *c);

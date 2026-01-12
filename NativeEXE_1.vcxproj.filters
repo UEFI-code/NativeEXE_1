@@ -36,6 +36,9 @@
     <ClCompile Include="stdio.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="key_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h">

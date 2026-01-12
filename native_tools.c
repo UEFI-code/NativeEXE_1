@@ -57,20 +57,18 @@ NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlo
     );
 }
 
-NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *c)
+NTSTATUS native_get_keyboard_scancode(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, KEYBOARD_INPUT_DATA *pInputData)
 {
-    start:
     NtClearEvent(EventHandle);
     pIoStatusBlock->Status = 0;
-    KEYBOARD_INPUT_DATA InputData = {0};
     LARGE_INTEGER ByteOffset = {0};
     NTSTATUS Status = NtReadFile(
         KeyboardHandle,
         EventHandle,
         NULL, NULL,
         pIoStatusBlock,
-        &InputData,
-        sizeof(InputData),
+        pInputData,
+        sizeof(KEYBOARD_INPUT_DATA),
         &ByteOffset,
         NULL
     );
@@ -81,12 +79,25 @@ NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoSta
     {
         PrintString("Read pending, waiting for event...\n");
         NtWaitForSingleObject(EventHandle, FALSE, NULL);
-        PrintString("Event signaled, Flags: 0x%x, MakeCode: 0x%x\n", InputData.Flags, InputData.MakeCode);
     }
-    if (InputData.Flags == 0) // key make
+    PrintString("Event signaled, Flags: 0x%x, MakeCode: 0x%x\n", pInputData->Flags, pInputData->MakeCode);
+    return 0;
+}
+
+NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *c)
+{
+    start:
+    KEYBOARD_INPUT_DATA InputData = {0};
+    NTSTATUS Status = native_get_keyboard_scancode(KeyboardHandle, pIoStatusBlock, EventHandle, &InputData);
+    if (!NT_SUCCESS(Status))
+        return Status;
+    if (InputData.Flags == 1)
+        goto start; // key release, ignore
+    *c = scancode_2_char(InputData.MakeCode);
+    if (*c == 0)
     {
-        *c = (char)InputData.MakeCode;
-        return STATUS_SUCCESS;
+        // special key or event
+        goto start;
     }
-    goto start;
+    return 0;
 }
