@@ -17,11 +17,11 @@ JUST `ntoskrnl.exe` (and necessary drv)
 
 # Todo
 
-[x] Deal with Keyboard Scancodes
-[x] Make a mini-shell
-[ ] Filesystem support
-[ ] Create Process support
-[ ] STDIO redirection
+- [x] Deal with Keyboard Scancodes
+- [x] Make a mini-shell
+- [ ] Filesystem support
+- [ ] Create Process support
+- [ ] STDIO redirection
 
 # Now Achieved
 
