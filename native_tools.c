@@ -109,6 +109,7 @@ NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoSta
     return 0;
 }
 
+UINT8 is_shift;
 NTSTATUS native_get_keyboard_str(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *buffer, UINT32 bufferSize)
 {
     buffer[bufferSize - 1] = '\0';
@@ -119,8 +120,19 @@ NTSTATUS native_get_keyboard_str(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStat
         NTSTATUS Status = native_get_keyboard_scancode(KeyboardHandle, pIoStatusBlock, EventHandle, &InputData);
         if (!NT_SUCCESS(Status))
             return Status;
-        if (InputData.Flags == 1)
-            continue; // key release, ignore
+        if (InputData.Flags == 1) // key release
+        {
+            if (InputData.MakeCode == 0x2A) // Left Shift key
+            {
+                is_shift = 0;
+            }
+            continue;
+        }
+        if (InputData.MakeCode == 0x2A) // Left Shift key
+        {
+            is_shift = 1;
+            continue;
+        }
         if (InputData.MakeCode == 0x1C) // Enter key
         {
             buffer[index] = '\0';

@@ -1,6 +1,8 @@
 typedef unsigned char      uint8_t;
 typedef unsigned short     uint16_t;
 
+extern uint8_t is_shift = 0;
+
 char scancode_2_char(uint16_t scancode)
 {
     switch (scancode)
@@ -47,13 +49,13 @@ char scancode_2_char(uint16_t scancode)
     case 0x0D: return '=';  // Equals
     case 0x1A: return '[';  // Left Bracket
     case 0x1B: return ']';  // Right Bracket
-    case 0x27: return ';';  // Semicolon
+    case 0x27: return (is_shift ? ':' : ';');
     case 0x28: return '\''; // Apostrophe
     case 0x29: return '`';  // Grave Accent
     case 0x2B: return '\\'; // Backslash
     case 0x33: return ',';  // Comma
     case 0x34: return '.';  // Period
-    case 0x35: return '/';  // Slash
+    case 0x35: return (is_shift ? '?' : '/');
     default: return 0;
     }
 }

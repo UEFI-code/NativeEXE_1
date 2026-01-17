@@ -13,6 +13,11 @@ void execute_command(char* command)
         native_sleep(2000);
         PrintString("Awake!\n");
     }
+    else if (my_strncmp(command, "DIR ", 4) == 0)
+    {
+        PrintString("Listing DIR: %s\n", command + 4);
+        list_dir(command + 4);
+    }
     else if(my_strcmp(command, "EXIT") == 0)
     {
         PrintString("Exiting...\n");

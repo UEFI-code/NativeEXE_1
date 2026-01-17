@@ -14,18 +14,24 @@ JUST `ntoskrnl.exe` (and necessary drv)
 
 - Open `\Device\KeyboardClass0` for keyboard input
 - Read keyboard input
+- mini-shell command support:
+    - `HI`
+    - `SLEEP`
+    - `DIR \??\C:\`
+    - `EXIT`
+    - `INT 3`
 
 # Todo
 
 - [x] Deal with Keyboard Scancodes
 - [x] Make a mini-shell
-- [ ] Filesystem support
+- [x] Filesystem support
 - [ ] Create Process support
 - [ ] STDIO redirection
 
 # Now Achieved
 
-![screenshot](./screenshot/5.png)
+![screenshot](./screenshot/6.png)
 
 See [Gallery](./screenshot) for more screenshots.
 

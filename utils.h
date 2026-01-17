@@ -50,7 +50,21 @@ NTSTATUS NtWaitForSingleObject(
 ULONG NTAPI RtlNtStatusToDosError(
     NTSTATUS Status
 );
+NTSTATUS NTAPI NtQueryDirectoryFile (
+    _In_ HANDLE FileHandle,
+    _In_opt_ HANDLE Event,
+    _In_opt_ PIO_APC_ROUTINE ApcRoutine,
+    _In_opt_ PVOID ApcContext,
+    _Out_ PIO_STATUS_BLOCK IoStatusBlock,
+    _Out_writes_bytes_(Length) PVOID FileInformation,
+    _In_ ULONG Length,
+    _In_ UINT32 FileInformationClass,
+    _In_ BOOLEAN ReturnSingleEntry,
+    _In_opt_ PUNICODE_STRING FileName,
+    _In_ BOOLEAN RestartScan
+    );
 
+VOID NtClose(IN HANDLE Handle);
 VOID RtlExitUserProcess(NTSTATUS ExitStatus);
 VOID NtTerminateProcess(
     IN HANDLE ProcessHandle,
@@ -67,9 +81,11 @@ int my_strcmp(const char* str1, const char* str2);
 int my_strncmp(const char* str1, const char* str2, size_t n);
 void native_sleep(unsigned int ms);
 int PrintString(char* fmt,...);
+void PutChar(char c);
 char scancode_2_char(UINT16 scancode);
 NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock);
 NTSTATUS native_get_keyboard_scancode(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, KEYBOARD_INPUT_DATA *pInputData);
 NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *c);
 NTSTATUS native_get_keyboard_str(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *buffer, UINT32 bufferSize);
+void list_dir(char *ascii_path);
 void execute_command(char* command);
