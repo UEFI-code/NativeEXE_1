@@ -32,8 +32,11 @@ void entry()
 	PrintString("Successfully created event, Handle: 0x%x\n", EventHandle);
 	while (1)
 	{
-		char c;
-		Status = native_get_keyboard_char(KeyboardHandle, &IoStatusBlock, EventHandle, &c);
+		//char c;
+		//Status = native_get_keyboard_char(KeyboardHandle, &IoStatusBlock, EventHandle, &c);
+		PrintString("Type something: ");
+		char buf[64];
+		Status = native_get_keyboard_str(KeyboardHandle, &IoStatusBlock, EventHandle, buf, sizeof(buf));
 		if (!NT_SUCCESS(Status))
 		{
 			ULONG win32Err = RtlNtStatusToDosError(Status);
@@ -42,11 +45,7 @@ void entry()
 			native_sleep(5000);
 			return;
 		}
-		PrintString("Received keyboard char: %c\n", c);
-		if (c == 27) // ESC key to exit
-		{
-			break;
-		}
+		PrintString("Received keyboard string: %s\n", buf);
 	}
 	return;
 }

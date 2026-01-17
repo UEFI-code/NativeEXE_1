@@ -30,6 +30,20 @@ int PrintString(char* fmt,...)
     return Len;
 }
 
+void PutChar(char c)
+{
+    CHAR buffer[2] = {c, '\0'};
+    ANSI_STRING AnsiString;
+    UNICODE_STRING UnicodeString;
+
+    RtlInitAnsiString(&AnsiString, buffer);
+    RtlAnsiStringToUnicodeString(&UnicodeString,
+                                 &AnsiString,
+                                 TRUE);
+    NtDisplayString(&UnicodeString);
+    RtlFreeUnicodeString(&UnicodeString);
+}
+
 NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock)
 {
     UNICODE_STRING KeyboardName;
@@ -74,13 +88,13 @@ NTSTATUS native_get_keyboard_scancode(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pI
     );
     if (!NT_SUCCESS(Status))
         return Status;
-    PrintString("NtReadFile succeeded: 0x%x\n", Status);
+    //PrintString("NtReadFile succeeded: 0x%x\n", Status);
     if (Status == STATUS_PENDING)
     {
-        PrintString("Read pending, waiting for event...\n");
+        //PrintString("Read pending, waiting for event...\n");
         NtWaitForSingleObject(EventHandle, FALSE, NULL);
     }
-    PrintString("Event signaled, Flags: 0x%x, MakeCode: 0x%x\n", pInputData->Flags, pInputData->MakeCode);
+    //PrintString("Event signaled, Flags: 0x%x, MakeCode: 0x%x\n", pInputData->Flags, pInputData->MakeCode);
     return 0;
 }
 
@@ -98,6 +112,45 @@ NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoSta
     {
         // special key or event
         goto start;
+    }
+    return 0;
+}
+
+NTSTATUS native_get_keyboard_str(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *buffer, UINT32 bufferSize)
+{
+    buffer[bufferSize - 1] = '\0';
+    UINT32 index = 0;
+    while (index < bufferSize - 1)
+    {
+        KEYBOARD_INPUT_DATA InputData = {0};
+        NTSTATUS Status = native_get_keyboard_scancode(KeyboardHandle, pIoStatusBlock, EventHandle, &InputData);
+        if (!NT_SUCCESS(Status))
+            return Status;
+        if (InputData.Flags == 1)
+            continue; // key release, ignore
+        if (InputData.MakeCode == 0x1C) // Enter key
+        {
+            buffer[index] = '\0';
+            PutChar('\n');
+            return 0;
+        }
+        if (InputData.MakeCode == 0x0E) // Backspace key
+        {
+            if (index > 0)
+            {
+                index--;
+                PutChar('\b');
+            }
+            continue;
+        }
+        buffer[index] = scancode_2_char(InputData.MakeCode);
+        if (buffer[index] == 0)
+        {
+            // special key or event
+            continue;
+        }
+        PutChar(buffer[index]);
+        index++;
     }
     return 0;
 }
