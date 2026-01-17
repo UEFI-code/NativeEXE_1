@@ -32,7 +32,7 @@ void entry()
 	PrintString("Successfully created event, Handle: 0x%x\n", EventHandle);
 	while (1)
 	{
-		PrintString("Type something: ");
+		PrintString("\\> ");
 		//char c;
 		//Status = native_get_keyboard_char(KeyboardHandle, &IoStatusBlock, EventHandle, &c);
 		char buf[64];
@@ -45,7 +45,8 @@ void entry()
 			native_sleep(5000);
 			return;
 		}
-		PrintString("Received keyboard string: %s\n", buf);
+		//PrintString("Received keyboard string: %s\n", buf);
+		execute_command(buf);
 	}
 	return;
 }

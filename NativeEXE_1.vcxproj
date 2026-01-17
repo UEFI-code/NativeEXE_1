@@ -164,6 +164,7 @@
   <ItemGroup>
     <ClCompile Include="key_decode.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="minishell.c" />
     <ClCompile Include="native_tools.c" />
     <ClCompile Include="stdio.c" />
   </ItemGroup>

@@ -91,4 +91,24 @@ int my_vsprintf(char* buffer, const char* format, va_list args)
     return buf_ptr - buffer;
 }
 
+int my_strcmp(const char* str1, const char* str2)
+{
+    while (*str1 && (*str1 == *str2)) {
+        str1++;
+        str2++;
+    }
+    return *(unsigned char*)str1 - *(unsigned char*)str2;
+}
+
+int my_strncmp(const char* str1, const char* str2, size_t n)
+{
+    while (n && *str1 && (*str1 == *str2)) {
+        str1++;
+        str2++;
+        n--;
+    }
+    if (n == 0) return 0;
+    return *(unsigned char*)str1 - *(unsigned char*)str2;
+}
+
 #pragma warning(pop)

@@ -17,16 +17,22 @@ JUST `ntoskrnl.exe` (and necessary drv)
 
 # Todo
 
-- Deal with Keyboard Scancodes
-- Make a mini-shell
-- Filesystem support
+[x] Deal with Keyboard Scancodes
+[x] Make a mini-shell
+[ ] Filesystem support
+[ ] Create Process support
+[ ] STDIO redirection
+
+# Now Achieved
+
+![screenshot](./screenshot/5.png)
+
+See [Gallery](./screenshot) for more screenshots.
+
+See [research.md](research.md) for how I debugged this.
 
 # Bugs
 
 ~~### `\Device\KeyboardClass0` Open failed~~
 
 ~~### read char failed~~
-
-![screenshot](./screenshot/4.png)
-
-See [research.md](research.md) for details.
