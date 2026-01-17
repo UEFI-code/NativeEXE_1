@@ -6,7 +6,7 @@ void entry()
 	UNICODE_STRING Text = RTL_CONSTANT_STRING(L"Msg From ntdll!NtDrawText\n");
     NtDrawText(&Text);
     NOP_Toy();
-	PrintString("Msg From ntdll!PrintString: %d, %s\n", 233, "Hello Native World");
+	PrintString("Msg From ntdll!NtDisplayString: %d, %s\n", 233, "Hello Native World");
 	// open keyboard device
 	HANDLE KeyboardHandle;
 	IO_STATUS_BLOCK IoStatusBlock;
