@@ -32,16 +32,9 @@ int PrintString(char* fmt,...)
 
 void PutChar(char c)
 {
-    CHAR buffer[2] = {c, '\0'};
-    ANSI_STRING AnsiString;
-    UNICODE_STRING UnicodeString;
-
-    RtlInitAnsiString(&AnsiString, buffer);
-    RtlAnsiStringToUnicodeString(&UnicodeString,
-                                 &AnsiString,
-                                 TRUE);
+    CHAR buffer[] = {c, 0};
+    UNICODE_STRING UnicodeString = {.Length = 2, .MaximumLength = 2, .Buffer = (PWCH)buffer};
     NtDisplayString(&UnicodeString);
-    RtlFreeUnicodeString(&UnicodeString);
 }
 
 NTSTATUS OpenKeyboard(OUT PHANDLE pKeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock)

@@ -32,9 +32,9 @@ void entry()
 	PrintString("Successfully created event, Handle: 0x%x\n", EventHandle);
 	while (1)
 	{
+		PrintString("Type something: ");
 		//char c;
 		//Status = native_get_keyboard_char(KeyboardHandle, &IoStatusBlock, EventHandle, &c);
-		PrintString("Type something: ");
 		char buf[64];
 		Status = native_get_keyboard_str(KeyboardHandle, &IoStatusBlock, EventHandle, buf, sizeof(buf));
 		if (!NT_SUCCESS(Status))
