@@ -43,6 +43,17 @@ char scancode_2_char(uint16_t scancode)
     case 0x0B: return '0';
     //case 0x1C: return '\n'; // Enter
     case 0x39: return ' ';  // Space
+    case 0x0C: return '-';  // Minus
+    case 0x0D: return '=';  // Equals
+    case 0x1A: return '[';  // Left Bracket
+    case 0x1B: return ']';  // Right Bracket
+    case 0x27: return ';';  // Semicolon
+    case 0x28: return '\''; // Apostrophe
+    case 0x29: return '`';  // Grave Accent
+    case 0x2B: return '\\'; // Backslash
+    case 0x33: return ',';  // Comma
+    case 0x34: return '.';  // Period
+    case 0x35: return '/';  // Slash
     default: return 0;
     }
 }
