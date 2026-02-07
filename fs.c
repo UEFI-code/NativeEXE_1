@@ -88,8 +88,11 @@ void list_dir(char *ascii_path)
         {
             UNICODE_STRING AnyKey = RTL_CONSTANT_STRING(L"...Press any key to continue...");
             NtDisplayString(&AnyKey);
+            waitKey:
             KEYBOARD_INPUT_DATA InputData = {0};
             native_get_keyboard_scancode(global_KeyboardHandle, &global_IoStatusBlock, global_EventHandle, &InputData);
+            if (InputData.Flags == 1)
+                goto waitKey;
             PutChar('\n');
         }
     }
