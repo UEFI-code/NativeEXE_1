@@ -84,6 +84,14 @@ void list_dir(char *ascii_path)
         if (info->NextEntryOffset == 0)
             break;
         info = (PFILE_DIRECTORY_INFORMATION)((UINT8 *)info + info->NextEntryOffset);
+        if ((info - dir_info_buf) % 10 == 9)
+        {
+            UNICODE_STRING AnyKey = RTL_CONSTANT_STRING(L"...Press any key to continue...");
+            NtDisplayString(&AnyKey);
+            KEYBOARD_INPUT_DATA InputData = {0};
+            native_get_keyboard_scancode(global_KeyboardHandle, &global_IoStatusBlock, global_EventHandle, &InputData);
+            PutChar('\n');
+        }
     }
 
     NtClose(hDir);

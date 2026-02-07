@@ -88,6 +88,11 @@ VOID NtTerminateProcess(
 // structures
 #include <ntddkbd.h>
 
+// global vars
+extern HANDLE global_KeyboardHandle;
+extern IO_STATUS_BLOCK global_IoStatusBlock;
+extern HANDLE global_EventHandle;
+
 // my utility functions
 void NOP_Toy();
 int my_vsprintf(char* buffer, const char* format, va_list args);

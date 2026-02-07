@@ -1,6 +1,10 @@
 #include <ntddk.h>
 #include "utils.h"
 
+HANDLE global_KeyboardHandle;
+IO_STATUS_BLOCK global_IoStatusBlock;
+HANDLE global_EventHandle;
+
 void entry()
 {
 	UNICODE_STRING Text = RTL_CONSTANT_STRING(L"Msg From ntdll!NtDrawText\n");
@@ -8,9 +12,7 @@ void entry()
     NOP_Toy();
 	PrintString("Msg From ntdll!NtDisplayString: %d, %s\n", 233, "Hello Native World");
 	// open keyboard device
-	HANDLE KeyboardHandle;
-	IO_STATUS_BLOCK IoStatusBlock;
-	NTSTATUS Status = OpenKeyboard(&KeyboardHandle, &IoStatusBlock);
+	NTSTATUS Status = OpenKeyboard(&global_KeyboardHandle, &global_IoStatusBlock);
 	if (!NT_SUCCESS(Status))
 	{
 		ULONG win32Err = RtlNtStatusToDosError(Status);
@@ -19,24 +21,23 @@ void entry()
 		native_sleep(5000);
 		return;
 	}
-	PrintString("Successfully opened keyboard device, Handle: 0x%x\n", KeyboardHandle);
+	PrintString("Successfully opened keyboard device, Handle: 0x%x\n", global_KeyboardHandle);
 	OBJECT_ATTRIBUTES ObjAttr;
     InitializeObjectAttributes(&ObjAttr, NULL, OBJ_KERNEL_HANDLE, NULL, NULL);
-	HANDLE EventHandle;
-    Status = NtCreateEvent(&EventHandle, 0x1F01FF, &ObjAttr, NotificationEvent, FALSE);
+    Status = NtCreateEvent(&global_EventHandle, 0x1F01FF, &ObjAttr, NotificationEvent, FALSE);
     if (!NT_SUCCESS(Status))
     {
         PrintString("Failed to create event: %x\n", Status);
         return;
     }
-	PrintString("Successfully created event, Handle: 0x%x\n", EventHandle);
+	PrintString("Successfully created event, Handle: 0x%x\n", global_EventHandle);
 	while (1)
 	{
 		PrintString("\\> ");
 		//char c;
 		//Status = native_get_keyboard_char(KeyboardHandle, &IoStatusBlock, EventHandle, &c);
 		char buf[64];
-		Status = native_get_keyboard_str(KeyboardHandle, &IoStatusBlock, EventHandle, buf, sizeof(buf));
+		Status = native_get_keyboard_str(global_KeyboardHandle, &global_IoStatusBlock, global_EventHandle, buf, sizeof(buf));
 		if (!NT_SUCCESS(Status))
 		{
 			ULONG win32Err = RtlNtStatusToDosError(Status);
