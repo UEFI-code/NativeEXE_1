@@ -18,6 +18,7 @@ JUST `ntoskrnl.exe` (and necessary drv)
     - `HI`
     - `SLEEP`
     - `DIR \??\C:\`
+    - `LSDEV \Device\`
     - `EXIT`
     - `INT 3`
 

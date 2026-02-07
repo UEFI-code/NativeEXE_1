@@ -45,6 +45,9 @@
     <ClCompile Include="fs.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h">
