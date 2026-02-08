@@ -19,6 +19,7 @@ JUST `ntoskrnl.exe` (and necessary drv)
     - `SLEEP`
     - `DIR \??\C:\`
     - `LSDEV \Device\`
+    - `RUN \??\C:\xxx.exe`
     - `EXIT`
     - `INT 3`
 
@@ -27,7 +28,7 @@ JUST `ntoskrnl.exe` (and necessary drv)
 - [x] Deal with Keyboard Scancodes
 - [x] Make a mini-shell
 - [x] Filesystem support
-- [ ] Create Process support
+- [x] Create Process support
 - [ ] STDIO redirection
 
 # Now Achieved

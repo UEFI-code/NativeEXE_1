@@ -23,6 +23,11 @@ void execute_command(char* command)
         PrintString("Listing DEV: %s\n", command + 6);
         list_dev(command + 6);
     }
+    else if (my_strncmp(command, "RUN ", 4) == 0)
+    {
+        PrintString("Creating process: %s\n", command + 4);
+        create_proc(command + 4);
+    }
     else if(my_strcmp(command, "EXIT") == 0)
     {
         PrintString("Exiting...\n");

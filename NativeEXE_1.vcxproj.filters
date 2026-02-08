@@ -48,6 +48,9 @@
     <ClCompile Include="dev.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="proc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h">

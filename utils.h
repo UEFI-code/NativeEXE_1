@@ -1,3 +1,73 @@
+typedef struct _CURDIR
+{
+    UNICODE_STRING DosPath;
+    HANDLE Handle;
+} CURDIR, *PCURDIR;
+typedef struct RTL_DRIVE_LETTER_CURDIR
+{
+    USHORT Flags;
+    USHORT Length;
+    ULONG TimeStamp;
+    UNICODE_STRING DosPath;
+} RTL_DRIVE_LETTER_CURDIR, *PRTL_DRIVE_LETTER_CURDIR;
+typedef struct _RTL_USER_PROCESS_PARAMETERS
+{
+    ULONG MaximumLength;
+    ULONG Length;
+    ULONG Flags;
+    ULONG DebugFlags;
+    HANDLE ConsoleHandle;
+    ULONG ConsoleFlags;
+    HANDLE StandardInput;
+    HANDLE StandardOutput;
+    HANDLE StandardError;
+    CURDIR CurrentDirectory;
+    UNICODE_STRING DllPath;
+    UNICODE_STRING ImagePathName;
+    UNICODE_STRING CommandLine;
+    PWSTR Environment;
+    ULONG StartingX;
+    ULONG StartingY;
+    ULONG CountX;
+    ULONG CountY;
+    ULONG CountCharsX;
+    ULONG CountCharsY;
+    ULONG FillAttribute;
+    ULONG WindowFlags;
+    ULONG ShowWindowFlags;
+    UNICODE_STRING WindowTitle;
+    UNICODE_STRING DesktopInfo;
+    UNICODE_STRING ShellInfo;
+    UNICODE_STRING RuntimeData;
+    RTL_DRIVE_LETTER_CURDIR CurrentDirectories[32];
+} RTL_USER_PROCESS_PARAMETERS, *PRTL_USER_PROCESS_PARAMETERS;
+typedef struct _SECTION_IMAGE_INFORMATION
+{
+    PVOID TransferAddress;
+    ULONG ZeroBits;
+    SIZE_T MaximumStackSize;
+    SIZE_T CommittedStackSize;
+    ULONG SubSystemType;
+    ULONG SubSystemVersion;
+    ULONG OperatingSystemVersion;
+    USHORT ImageCharacteristics;
+    USHORT DllCharacteristics;
+    USHORT Machine;
+    BOOLEAN ImageContainsCode;
+    UCHAR ImageFlags;
+    ULONG LoaderFlags;
+    ULONG ImageFileSize;
+    ULONG CheckSum;
+} SECTION_IMAGE_INFORMATION, *PSECTION_IMAGE_INFORMATION;
+typedef struct _RTL_USER_PROCESS_INFORMATION
+{
+    ULONG Size;
+    HANDLE ProcessHandle;
+    HANDLE ThreadHandle;
+    CLIENT_ID ClientId;
+    SECTION_IMAGE_INFORMATION ImageInformation;
+} RTL_USER_PROCESS_INFORMATION, * PRTL_USER_PROCESS_INFORMATION;
+
 // ntdll functions
 NTSTATUS NtDrawText(PUNICODE_STRING Text);
 NTSTATUS NtDisplayString(PUNICODE_STRING DisplayString);
@@ -85,6 +155,38 @@ VOID NtTerminateProcess(
     IN NTSTATUS ExitStatus
 );
 
+NTSTATUS
+RtlCreateProcessParameters (
+    OUT PRTL_USER_PROCESS_PARAMETERS *ProcessParameters,
+    IN PUNICODE_STRING ImagePathName OPTIONAL,
+    IN PUNICODE_STRING DllPath OPTIONAL,
+    IN PUNICODE_STRING CurrentDirectory OPTIONAL,
+    IN PUNICODE_STRING CommandLine OPTIONAL,
+    IN PWSTR Environment OPTIONAL,
+    IN PUNICODE_STRING WindowTitle OPTIONAL,
+    IN PUNICODE_STRING DesktopInfo OPTIONAL,
+    IN PUNICODE_STRING ShellInfo OPTIONAL,
+    IN PUNICODE_STRING RuntimeInfo OPTIONAL
+);
+NTSTATUS
+RtlCreateUserProcess(
+    IN PUNICODE_STRING ImageFileName,
+    IN ULONG Attributes,
+    IN PRTL_USER_PROCESS_PARAMETERS ProcessParameters,
+    IN PVOID ProcessSecutityDescriptor OPTIONAL,
+    IN PVOID ThreadSecurityDescriptor OPTIONAL,
+    IN HANDLE ParentProcess OPTIONAL,
+    IN BOOLEAN CurrentDirectory,
+    IN HANDLE DebugPort OPTIONAL,
+    IN HANDLE ExceptionPort OPTIONAL,
+    OUT PRTL_USER_PROCESS_INFORMATION ProcessInfo
+);
+NTSTATUS
+NtResumeThread(
+    IN HANDLE ThreadHandle,
+    OUT PULONG SuspendCount OPTIONAL
+);
+
 // structures
 #include <ntddkbd.h>
 
@@ -108,5 +210,6 @@ NTSTATUS native_get_keyboard_char(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoSta
 NTSTATUS native_get_keyboard_str(HANDLE KeyboardHandle, IO_STATUS_BLOCK *pIoStatusBlock, HANDLE EventHandle, CHAR *buffer, UINT32 bufferSize);
 void list_dir(char *ascii_path);
 void list_dev(char *ascii_path);
+void create_proc(char *ascii_path);
 
 void execute_command(char* command);
