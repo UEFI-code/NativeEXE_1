@@ -50,7 +50,7 @@ void list_dir(char *ascii_path)
     );
     if (!NT_SUCCESS(status))
     {
-        PrintString("NtCreateFile failed: 0x%X\n", RtlNtStatusToDosError(status));
+        PrintString("NtCreateFile failed: 0x%x\n", RtlNtStatusToDosError(status));
         return;
     }
 

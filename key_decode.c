@@ -45,7 +45,7 @@ char scancode_2_char(uint16_t scancode)
     case 0x0B: return '0';
     //case 0x1C: return '\n'; // Enter
     case 0x39: return ' ';  // Space
-    case 0x0C: return '-';  // Minus
+    case 0x0C: return (is_shift ? '_' : '-');
     case 0x0D: return '=';  // Equals
     case 0x1A: return '[';  // Left Bracket
     case 0x1B: return ']';  // Right Bracket
