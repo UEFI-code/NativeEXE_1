@@ -15,24 +15,13 @@ void create_proc(char *ascii_path)
     RtlInitAnsiString(&AnsiString, ascii_path);
     UNICODE_STRING nt_path;
     RtlAnsiStringToUnicodeString(&nt_path, &AnsiString, TRUE);
-    // find the image file
-    PCWSTR file_part = nt_path.Buffer + nt_path.Length / 2 - 1;
-    while (*file_part != L'\\')
-    {
-        file_part--;
-    }
-    file_part++;
-    UNICODE_STRING exe_name;
-    RtlInitUnicodeString(&exe_name, file_part);
-    //wprintf(L"nt_path: %wZ, exe_name: %wZ\n", &nt_path, &exe_name);
-
-    UNICODE_STRING cmdline;
-    RtlInitUnicodeString(&cmdline, nt_path.Buffer);
+    UNICODE_STRING win32_path = { 0 };
+    RtlInitUnicodeString(&win32_path, nt_path.Buffer + 4);
     UNICODE_STRING dll_path;
     RtlInitUnicodeString(&dll_path, SharedData->NtSystemRoot);
     PRTL_USER_PROCESS_PARAMETERS proc_param;
     WCHAR Env[2] = { 0, 0 };
-    NTSTATUS status = RtlCreateProcessParameters(&proc_param, &exe_name, &cmdline, &dll_path, (PUNICODE_STRING)Env, NULL, 0, 0, 0, 0);
+    NTSTATUS status = RtlCreateProcessParameters(&proc_param, &win32_path, &dll_path, NULL, (PUNICODE_STRING)Env, NULL, &nt_path, 0, 0, 0);
     if (!NT_SUCCESS(status))
     {
         PrintString("RtlCreateProcessParameters failed: 0x%x\n", RtlNtStatusToDosError(status));
@@ -46,7 +35,7 @@ void create_proc(char *ascii_path)
         NULL,
         NULL,
         NULL,
-        FALSE,
+        TRUE, // current cwd
         NULL,
         NULL,
         &proc_info
